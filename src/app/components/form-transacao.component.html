@@ -1,0 +1,38 @@
+<form #form="ngForm" ngNativeValidate role="form" method="post" class="formulario" (ngSubmit)="adicionarTransacao()">
+    <div class="caixaSelect">
+        <label class="label" for="tipoTransacao">Tipo de Transação</label>
+        <select id="tipoTransacao"
+                name="tipoTransacao" 
+                class="selectForm"
+                [(ngModel)]="model.tipoTransacao"
+                #tipoTransacao="ngModel">
+            <option value="1">Compra</option>
+            <option value="2">Venda</option>
+        </select>
+    </div>
+    <div class="caixaInput">
+        <label class="label" for="mercadoria">Nome da Mercadoria</label>
+        <input id="mercadoria" 
+            class="inputForm" 
+            type="text" 
+            required
+            name="nomeMercadoria" 
+            placeholder="Mercadoria"
+            [(ngModel)]="model.nomeMercadoria"
+            #nomeMercadoria="ngModel" />
+    </div>
+    <div class="caixaInput">
+        <label class="label" for="valorMercadoria">Valor</label>
+        <input id="valorMercadoria" 
+            class="inputForm" 
+            type="text" 
+            name="valorMercadoria" 
+            placeholder="Valor"
+            required
+            [(ngModel)]="model.valorMercadoria"
+            #valorMercadoria="ngModel"
+            currencyMask
+            [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', align: 'left' }" />
+    </div>
+    <button type="submit" class="botao">Adicionar transação</button>
+</form>

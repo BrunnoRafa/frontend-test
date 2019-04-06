@@ -1,0 +1,53 @@
+.formulario {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #c0c0c0;
+}
+
+%estilo-caixa-elemento {
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.caixaSelect {
+    @extend %estilo-caixa-elemento;   
+}
+
+.caixaInput {
+    @extend %estilo-caixa-elemento;
+}
+
+.label {
+    display: block;
+    width: 100%;
+    height: 20px;
+    font-size: 12px;
+}
+
+%estilo-elemento-form {
+    width: 100%;
+    height: 26px;
+    border-radius: 4px;
+    border: 1px solid #CCC;
+}
+
+.selectForm {
+    @extend %estilo-elemento-form;
+}
+
+.inputForm {
+    padding: 2px 8px;
+    @extend %estilo-elemento-form;
+}
+
+.botao {
+    width: 100%;
+    height: 24px;
+    color: #fff;
+    font-size: 11px;
+    border: none;
+    border-radius: 4px;
+    background: #000;
+}
