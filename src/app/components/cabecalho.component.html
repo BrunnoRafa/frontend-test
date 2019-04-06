@@ -1,0 +1,25 @@
+<header class="cabecalhoApp">
+    <div class="logoSistema">
+        Logo
+    </div>
+    <div class="tituloCabecalho">
+        <h2>
+            {{tituloCabecalho}}
+        </h2>  
+    </div>
+    <nav class="menuApp">
+        <div class="menuMobile" (click)="exibirMenu()">
+            <span class="barraMenuApp"></span>
+            <span class="barraMenuApp"></span>
+            <span class="barraMenuApp"></span>
+        </div>
+        <div class="listaMenuMobile" *ngIf="exibeMenu" >
+            <span class="fecharMenu" (click)="fecharMenu()">X</span>
+            <ul>
+                <li>Resumo</li>
+                <li>Dashboard</li>
+                <li>Configurações</li>
+            </ul>
+        </div>
+    </nav>
+</header>
