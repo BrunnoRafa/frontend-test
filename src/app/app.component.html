@@ -1,6 +1,7 @@
 <div class="caixaApp">
   <app-cabecalho></app-cabecalho>
   <div class="caixaConteudo">
-    <app-form-transacao></app-form-transacao>
+    <app-form-transacao (atualiza)="atualiza($event)"></app-form-transacao>
+    <app-extrato-transacao [transacoes]="transacoes" [valorTotal]="totalExtrato"></app-extrato-transacao>
   </div>
 </div>
