@@ -11,7 +11,7 @@ export class ControleFinanceiroService {
     }
 
     incluirTransacao(model: ControleFinanceiroModel) {
-        let tipo = '';
+        var tipo = '';
 
         (model.tipoTransacao == '1') ? tipo = '-' : tipo = '+';
         if (localStorage.getItem('transacoes') != null) {
