@@ -10,8 +10,8 @@
 }
 
 .tituloExtrato {
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 16px;
+    font-family: 'latobold', 'arial', sans-serif;
     text-align: center;
 }
 
@@ -23,6 +23,7 @@
     thead tr,
     tfoot tr {
         height: 22px;
+        font-family: 'latobold', 'arial', sans-serif;
     }
 
     tbody {
@@ -33,6 +34,10 @@
 
         td {
             padding: 10px 2px;
+
+            &:last-child {
+                text-align: center;
+            }
         }
     }
 
