@@ -1,8 +1,19 @@
 .formulario {
+    position: relative;
     width: 100%;
     height: auto;
     padding-bottom: 20px;
     border-bottom: 2px solid #c0c0c0;
+}
+
+.tituloNovaTransacao {
+    display: none;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
 }
 
 %estilo-caixa-elemento {
@@ -50,4 +61,59 @@
     border: none;
     border-radius: 4px;
     background: #000;
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+    %estilo-caixa {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 14px;
+    }
+
+    .formulario {
+        height: 164px;
+        border: 1px solid #c0c0c0;
+    }
+
+    .tituloNovaTransacao {
+        display: block;
+    }
+
+    .caixaSelect {
+        width: 22%;
+        @extend %estilo-caixa;
+    }
+
+    .caixaInput {
+        @extend %estilo-caixa;
+
+        &.mercadoria {
+            width: 42%;
+        }
+
+        &.valorMercadoria {
+            width: 24%;
+        }
+    }
+
+    .botao {
+        position: absolute;
+        right: 20px;
+        bottom: 18px;
+        width: 28%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .formulario {
+        display: inline-block;
+        vertical-align: top;
+        width: 360px;
+        padding: 12px;
+        border: 1px solid #c0c0c0;
+    }
+
+    .tituloNovaTransacao {
+        display: block;
+    }
 }

@@ -2,11 +2,7 @@
     <div class="logoSistema">
         Logo
     </div>
-    <div class="tituloCabecalho">
-        <h2>
-            {{tituloCabecalho}}
-        </h2>  
-    </div>
+    {{tituloCabecalho}}
     <nav class="menuApp">
         <div class="menuMobile" (click)="exibirMenu()">
             <span class="barraMenuApp"></span>
@@ -15,6 +11,13 @@
         </div>
         <div class="listaMenuMobile" *ngIf="exibeMenu" >
             <span class="fecharMenu" (click)="fecharMenu()">X</span>
+            <ul>
+                <li>Resumo</li>
+                <li>Dashboard</li>
+                <li>Configurações</li>
+            </ul>
+        </div>
+        <div class="listaMenu">
             <ul>
                 <li>Resumo</li>
                 <li>Dashboard</li>

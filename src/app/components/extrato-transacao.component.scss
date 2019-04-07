@@ -11,6 +11,7 @@
 
 .tituloExtrato {
     font-size: 14px;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -58,5 +59,15 @@
 
     .nenhumaTransacao {
         text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+ 
+    .caixaExtrato {
+        display: inline-block;
+        vertical-align: top;
+        width: 600px;
+        margin-left: 15px;
     }
 }

@@ -1,5 +1,8 @@
 <form #form="ngForm" ngNativeValidate role="form" method="post" class="formulario" (ngSubmit)="adicionarTransacao()">
-    <div class="caixaSelect">
+    <h3 class="tituloNovaTransacao">
+        Nova Transação
+    </h3>
+    <div class="caixaSelect tipoTransacao">
         <label class="label" for="tipoTransacao">Tipo de Transação</label>
         <select id="tipoTransacao"
                 name="tipoTransacao" 
@@ -10,7 +13,7 @@
             <option value="2">Venda</option>
         </select>
     </div>
-    <div class="caixaInput">
+    <div class="caixaInput mercadoria">
         <label class="label" for="mercadoria">Nome da Mercadoria</label>
         <input id="mercadoria" 
             class="inputForm" 
@@ -21,7 +24,7 @@
             [(ngModel)]="model.nomeMercadoria"
             #nomeMercadoria="ngModel" />
     </div>
-    <div class="caixaInput">
+    <div class="caixaInput valorMercadoria">
         <label class="label" for="valorMercadoria">Valor</label>
         <input id="valorMercadoria" 
             class="inputForm" 

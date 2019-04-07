@@ -2,19 +2,12 @@ import { Injectable } from '@angular/core';
 
 import { ControleFinanceiroModel } from './controle-financeiro.model';
 
-const teste = [
-    { tipo: '+', descricao: 'Teste Mercadoria', valor: 10 },
-    { tipo: '-', descricao: 'Teste Mercadoria 1', valor: 15 },
-    { tipo: '+', descricao: 'Teste Mercadoria 2', valor: 12 }
-];
-
 @Injectable()
 export class ControleFinanceiroService {
     transacoes = [];
 
     constructor() {
-        // localStorage.setItem('transacoes', JSON.stringify(teste));
-        localStorage.removeItem('transacoes');
+        // localStorage.removeItem('transacoes');
     }
 
     incluirTransacao(model: ControleFinanceiroModel) {
