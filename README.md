@@ -1,3 +1,7 @@
+# Informações para rodar o projeto
+Após clonar o projeto é necessário ter em seu pc o Nodejs e npm.
+Assim que abrir o projeto execute o comando npm install após o termino da instalação para rodar o projeto use o comando ng serve ou npm start.
+
 # Teste de front-end Via Varejo
 
 Este teste busca avaliar quesitos técnicos para as pessoas que se candidatem às vagas de desenvolvimento front-end da Via Varejo.

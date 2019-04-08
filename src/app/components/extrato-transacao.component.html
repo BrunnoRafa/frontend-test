@@ -1,0 +1,33 @@
+<div class="caixaExtrato">
+    <h3 class="tituloExtrato">Extrato de transações</h3>
+    <div class="caixaConteudoExtrato">
+        <table class="tabelaExtrato">
+            <thead>
+                <tr>
+                    <th class="colunaTipoTransacao"></th>
+                    <th class="colunaNomeMercadoria">Mercadoria</th>
+                    <th class="colunaValorMercadoria">Valor</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="transacoes != null">
+                <tr *ngFor="let transacao of transacoes" >
+                    <td>{{transacao.tipo}}</td>
+                    <td>{{transacao.descricao}}</td>
+                    <td>{{transacao.valor | currency:'R$ '}}</td>
+                </tr>
+            </tbody>
+            <tbody *ngIf="transacoes == null">
+                    <tr>
+                        <td class="nenhumaTransacao" colspan="3">Nenhuma transação</td>
+                    </tr>
+                </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td>Total</td>
+                    <td>{{valorTotal | currency:'R$ '}} {{(valorTotal == 0 || transacoes == null) ? '' : valorTotal > 0 ? ' (lucro)' : ' (prejuizo)'}}</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>

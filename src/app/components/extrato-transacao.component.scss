@@ -1,0 +1,78 @@
+.caixaExtrato {
+    width: 100%;
+    height: auto;
+    padding: 32px 0px;
+}
+
+.caixaConteudoExtrato {
+    width: 100%;
+    height: auto;
+}
+
+.tituloExtrato {
+    font-size: 16px;
+    font-family: 'latobold', 'arial', sans-serif;
+    text-align: center;
+}
+
+.tabelaExtrato {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+
+    thead tr,
+    tfoot tr {
+        height: 22px;
+        font-family: 'latobold', 'arial', sans-serif;
+    }
+
+    tbody {
+
+        tr {
+            border-top: 1px solid #C0c0c0;
+        }
+
+        td {
+            padding: 10px 2px;
+
+            &:last-child {
+                text-align: center;
+            }
+        }
+    }
+
+    tfoot {
+        border-top: 3px double #C0c0c0;
+
+        td {
+            padding: 10px 2px 0px;
+        }
+    }
+
+    .colunaTipoTransacao {
+        width: 10%;
+    }
+
+    .colunaNomeMercadoria {
+        width: 60%;
+        text-align: left;
+    }
+
+    .colunaValorMercadoria {
+        width: 30%;
+    }
+
+    .nenhumaTransacao {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+ 
+    .caixaExtrato {
+        display: inline-block;
+        vertical-align: top;
+        width: 600px;
+        margin-left: 15px;
+    }
+}

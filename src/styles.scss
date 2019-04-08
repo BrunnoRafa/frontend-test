@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'latobold';
+    src: url('/assets/fonts/Lato/lato-bold-webfont.woff2') format('woff2'),
+         url('/assets/fonts/Lato/lato-bold-webfont.woff') format('woff'),
+         url('/assets/fonts/Lato/Lato-Bold.ttf') format("truetype");;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('/assets/fonts/Lato/lato-regular-webfont.woff2') format('woff2'),
+         url('/assets/fonts/Lato/lato-regular-webfont.woff') format('woff'),
+         url('/assets/fonts/Lato/Lato-Regular.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'latoregular', 'arial', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    color: #000;
+}

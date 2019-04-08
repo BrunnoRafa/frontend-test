@@ -1,0 +1,168 @@
+$preto: #000;
+
+.cabecalhoApp {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    text-align: center;
+    background: #CCC;   
+    font-family: 'latobold', 'arial', sans-serif;
+}
+
+%configuracao-padrao-cabecalho {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+}
+
+.logoSistema {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 70px;
+    @extend %configuracao-padrao-cabecalho;
+}
+
+.menuApp {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 66px;
+    cursor: pointer;
+    @extend %configuracao-padrao-cabecalho;
+
+    ul {
+        position: relative;
+        top: 50px;
+        width: 100%;
+        height: auto;
+        text-align: right;
+    }
+
+    li {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        font-size: 22px;
+        color: #FFF;
+        padding-right: 25px;
+        cursor: pointer;
+
+        &:hover {
+            color: $preto;
+            background: #c0c0c0
+        }
+    }
+}
+
+.menuMobile {
+    position: relative;
+    top: -20px;
+    width: 50%;
+    height: 50%;
+    margin: 50% auto 0;
+    cursor: pointer;
+
+    .barraMenuApp {
+        display: block;
+        width: 100%;
+        height: 6px;
+        margin-top: 6px;
+        background: $preto;
+    }
+}
+
+.listaMenuMobile {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    z-index: 99;
+    background: $preto;
+}
+
+.listaMenu {
+    display: none;
+    width: 100%;
+    height: 100%;
+    color: $preto;
+    background: #FAFAFA;
+}
+
+.fecharMenu {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    font-size: 24px;
+    font-family: 'latobold', 'arial', sans-serif;
+    color: #FFF;
+    line-height: 18px;
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+    .listaMenuMobile {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .cabecalhoApp {
+        padding-left: 90px;
+        text-align: left;
+    }
+
+    .menuApp {
+        top: 15px;
+        right: 20px;
+        width: auto;
+        height: 30px;
+
+        ul {
+            top: 0px;
+            height: 100%;
+            text-align: left;
+        }
+
+        li {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            width: auto;
+            height: 100%;
+            line-height: 30px;
+            padding: 0px 16px;
+            font-size: 15px;
+            color: inherit;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 7px;
+                right: -3px;
+                display: block;
+                width: 1px;
+                height: 17px;
+                background: $preto;
+            }
+
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .listaMenu {
+        display: block;
+    }
+
+    .menuMobile {
+        display: none;
+    }
+}
